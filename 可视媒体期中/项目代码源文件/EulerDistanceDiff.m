@@ -1,0 +1,9 @@
+function de=EulerDistanceDiff(Mov,n) %«Û÷°≤Ó≈∑ œæ‡¿Î
+Xn=rgb2gray(Mov(1,n).cdata);
+Xn=double(Xn);
+Xnp1=rgb2gray(Mov(1,n+1).cdata);
+Xnp1=double(Xnp1);
+Xnq1=rgb2gray(Mov(1,n+2).cdata);
+Xnq1=double(Xnq1);
+diff = (Xnq1(:)-Xnp1(:))-(Xnp1(:)-Xn(:));
+de = sqrt(sum(diff.*diff)); 
